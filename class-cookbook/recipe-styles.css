@@ -1,0 +1,39 @@
+body {
+background-color: rgba(248, 245, 233, 0.8);
+font-family: Avenir;
+font-size: 17px;
+color: #5A4339;
+}
+
+#title {
+font-family:'Arapey', italic; 
+font-size: 50px;
+color: #7A1712;
+letter-spacing: -0.5px;
+text-transform:capitalize;
+text-align: center;
+margin-bottom: -6px;
+text-shadow: 1px 1px #ffffff;
+}
+
+#description {
+font-size: 18px;
+letter-spacing: -0.5px;
+text-align: center;
+}
+
+.subtitle {
+font-family:'Arapey', italic; 
+font-size: 30px;
+color: #7A1712;
+letter-spacing: -0.25px;
+text-transform:capitalize;
+margin-bottom: -7px;
+}
+
+div {
+position: center;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+}
