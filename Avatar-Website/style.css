@@ -1,0 +1,30 @@
+#grid-container1 {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+
+#grid-container-big {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#frontarrow {
+    position:absolute;
+    bottom: 8%;
+    right: 5%;
+}
+#backarrow {
+    position:absolute;
+    bottom: 8%;
+    left: 5%;
+}
+
+#reload{
+    position:absolute;
+    bottom: 7.8%;
+    right: 5%;   
+}

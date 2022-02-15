@@ -1,0 +1,78 @@
+
+body {
+    background-color: rgb(255, 253, 245);
+    font-family: Avenir;
+    font-weight: 500;
+    font-size: 18px;
+    color: #059156;
+    }
+
+#listtext {
+    background-color: rgb(255, 253, 245);
+    font-family: Avenir;
+    font-weight: 500;
+    font-size: 19px;
+    color: #039659;
+    }
+
+h1 {
+font-family: Avenir;
+font-weight: bold;
+font-size: 42px;
+color: #dd2d7f;
+letter-spacing: -1px;
+text-align: center;
+/* margin-bottom: 15px; */
+margin-top: 50px;
+text-shadow: 1px 1px #ffffff;
+line-height: 50px;
+}
+
+h2 {
+    font-family: Avenir;
+    font-weight: bold;
+    font-size: 22px;
+    color: #059156;
+    margin-bottom: -13px;
+    }
+
+    h3 {
+        font-family: Avenir;
+        font-weight: bold;
+        font-size: 38px;
+        color: #dd2d7f;
+        letter-spacing: -1px;
+        text-align: center;
+        /* margin-bottom: 15px; */
+        margin-top: 50px;
+        text-shadow: 1px 1px #ffffff;
+        line-height: 50px;
+        }
+
+#grid-container1 {
+    position: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#rightbutton-container {
+    position:absolute;
+    top: 40%;
+    left: 80%;
+}
+
+#leftbutton-container {
+    position:absolute;
+    top: 40%;
+    right: 80%;
+}
+
+.bolded { font-weight: bolder; }
+
+/* #frontbutton {
+
+}
+
+#backbutton{
+} */
