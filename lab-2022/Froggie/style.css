@@ -1,7 +1,13 @@
+@font-face {
+  font-family: 'Press Start 2P', cursive;
+  src: url(fonts/Point-Regular.woff2);
+}
+
 body {
     background-color: rgba(255, 253, 240, 0.884);
     font-family: Point-Regular;
     font-size: 17px;
+    padding: 0%;
     }
 
 .navbar {
@@ -9,12 +15,14 @@ body {
     font-size: 14px;
     color: #f1149d;
     line-height: 25px;
+    list-style-type: none;
 }
 
 a:link {
     color: #0a9b22;
     text-decoration: none;
     text-transform: uppercase;
+    padding:0%;
 }
 
 a:active{
@@ -35,14 +43,16 @@ h1  {
     color: #f1149d;
     margin-bottom: 25px;
     letter-spacing: -0.5px;
+    padding:0%;
     }
 
     h2  {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 25px;
         color: rgb(0, 224, 37);
-        margin-bottom: -10px;
+        margin-bottom: -35px;
         letter-spacing: 0.5px;
+        padding:0%;
         }
 
 p{
@@ -52,15 +62,18 @@ p{
         margin-bottom: 15px; 
         line-height: 25px;
         letter-spacing: -0.05px;
+        padding:2%;
     }
 
 .list {
     font-family:monospace;
+    list-style-type: none;
     font-size: 18px;
     color: #9b90ff;
     margin-bottom: 25px; 
     line-height: 25px;
     letter-spacing: -0.75px;
+    padding:2%;
 }
 
 .main {
@@ -69,6 +82,7 @@ p{
     margin-right: auto;
     width:65%;
     background-color:rgb(240, 255, 233);
+    padding:0%;
 }
 
 .navbardiv{
@@ -76,6 +90,7 @@ p{
     margin-left: -0.5%;
     margin-right: auto;
     top:2%;
+    padding:0%
 }
 
 .row {
@@ -83,18 +98,21 @@ p{
   flex-wrap: wrap;
   padding: 0 4px;
   background-color: rgb(255, 234, 238);
+  padding:1%;
 }
 
 .column {
   flex: 25%;
   max-width: 50%;
   padding: 4px;
+  padding:1%;
 }
 
 .column img {
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
+  padding:1%; 
 }
 
 @media screen and (max-width: 800px) {
