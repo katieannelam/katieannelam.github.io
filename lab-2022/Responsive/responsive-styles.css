@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital@0;1&display=swap");
+
+@media screen and (max-width: 480px) {
+    .title {
+        font-family: Merriweather;
+        font-size: 32px;
+        color: white;
+        margin-bottom: -0.25%;
+        }
+    .author{
+        font-family: Merriweather;
+        font-size: 20px;
+        color: white;
+        margin-bottom: 7%;
+        }
+    body{
+        background-color: rgb(61, 87, 206);
+        font-family: karla;
+        font-size: 15px;
+        color: white;
+        padding: 5%;
+        line-height: 130%;
+        }
+    }
+
+@media screen and (min-width: 481px) {
+    .title {
+        font-family: Comic Sans MS;
+        font-size: 40px;
+        color: yellow;
+        margin-bottom: -13%;
+    }
+    .author{
+        font-family: gilsans;
+        font-size: 30px;
+        color:blueviolet;
+        margin-bottom: 5%;
+    }
+    body{
+        background-color:rgb(255, 32, 144);
+        font-family: papyrus;
+        font-style: italic;
+        font-size: 20px;
+        color: rgb(153, 255, 0);
+        padding: 18%;
+        line-height: 300%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .title {
+        font-family: 'Minion Pro', sans-serif;
+        font-style: normal;
+        font-size: 60px;
+        color: beige;
+        margin-bottom: -2%;
+    }
+    .author{
+        font-family: 'Minion Pro', sans-serif;
+        font-style: normal;
+        font-size: 40px;
+        color:beige;
+        margin-bottom: 7%;
+    }
+    body{
+        background-color:#1b1d1f;
+        font-family: Avenir;
+        font-style: normal;
+        font-size: 20px;
+        color:beige;
+        padding: 10%;
+        line-height: 140%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .title {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 120px;
+        color: rgb(140, 0, 255);
+        margin-bottom: -3%;
+        }
+        .author{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 80px;
+        color: rgb(255, 0, 234);
+        margin-bottom: 5%;
+        }
+        body{
+        background-color:rgb(0, 255, 157);
+        font-family:'American Typewriter', sans-serif;
+        font-size: 40px;
+        color: rgb(17, 0, 255);
+        padding: 0.5%;
+        line-height: 160%;
+        }
+    }
+
+@media screen and (min-width: 1200px) {
+    .title {
+        font-family: 'Sanchez', serif;
+        font-style: bold;
+        font-size: 70px;
+        color: rgb(255, 255, 255);
+        margin-bottom: 3%;
+        padding-top: 0%;
+        }
+        .author{
+        font-family: 'Sanchez', serif;
+        font-style: bold;
+        font-size: 50px;
+        color:rgb(255, 255, 255);
+        margin-bottom: 5%;
+        }
+        body{
+        background-color: hotpink;
+        font-family: Montserrat;
+        line-height: 145%;
+        font-size: 26px;
+        color:rgb(255, 255, 255);
+        padding: 10%;
+        }
+    }
