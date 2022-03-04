@@ -1,3 +1,4 @@
+@media screen and (max-width: 992px) {
 @font-face {
     font-family: Cooper Light;
     src: url(Cooper\ Light\ BT.ttf);
@@ -14,17 +15,18 @@
 }
 
 body{
-    background-color:#FFFCF4;
+    background-color: rgb(226, 43, 43);
     padding: 0;
     margin: 0;
     cursor:url('heartcursor.png'), auto;
-    font-family: Franklin Gothic;
+    font-family: Nuckle;
+    color: #FFFCF4;
 }
 
 h1{
     font-family: kansasnew, serif;
-    font-size: 10em;
-    color:rgb(226, 43, 43);
+    font-size: 3em;
+    color:#FFFCF4;
     line-height: 0.05em;
 }
 
@@ -32,68 +34,151 @@ h2{
   font-family: Nuckle;
   font-weight: 50000;
   font-style: normal;
-  font-size: 1.35em;
-  color: rgb(226, 43, 43);
-  margin-top:-60px;
+  font-size: 1em;
+  color: #FFFCF4;
+  margin-top:280px;
 }
 
 h3{
   font-family: kansasnew, serif;
   font-weight: 500;
   font-style: normal;
-    font-size: 1.5em;
-    color: rgb(226, 43, 43);
+  font-size: 3em;
+  color: #FFFCF4;
+  line-height: 52px;
 }
 
+h4{
+  font-family: kansasnew, serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2em;
+  color: #FFFCF4;
+  position: fixed;
+  border: 3px dotted transparent;
+  top:18%
+}
+
+h5{
+  font-family: kansasnew, serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5em;
+  color: #FFFCF4;
+  position: fixed;
+  letter-spacing: -1px;
+  border: 3px dotted transparent;
+  top: 23%;
+  left:7%
+}
+
+
 .accept {
-    position:relative;
+    position:absolute;
     font-family: kansasnew, serif;
     font-weight: 700;
     font-style: normal;
     font-size: 1em;
-    color:rgb(226, 43, 43);
+    color:#FFFCF4;
     /* line-height: 200px; */
     letter-spacing: -0.01em;
-    line-height: 20px;
+    line-height: 210px;
 }
 
 .love {
-    position:relative;
+    position:absolute;
     font-family: kansasnew, serif;
     font-weight: 700;
     font-style: normal;
     font-size: 1.5em;
-    color:rgb(226, 43, 43);
+    color:#FFFCF4;
     letter-spacing: -0.01em;
-    line-height: 95px;
+    line-height: 375px;
 }
 
 .yourself1 {
-    position:relative;
+    position:absolute;
     font-family: kansasnew, serif;
     font-weight: 700;
     font-style: normal;
     font-size: 0.75em;
-    color:rgb(226, 43, 43);
+    color:#FFFCF4);
     letter-spacing: -0.01em;
-    line-height: 200px;
+    line-height: 280px;
 }
 
 .yourself2 {
-    position:relative;
+    position:absolute;
     font-family: kansasnew, serif;
     font-weight: 700;
     font-style: normal;
     font-size: 0.75em;
-    color:rgb(226, 43, 43);
+    color:#FFFCF4;
     letter-spacing: -0.01em;
-    line-height: 200px;
+    line-height: 470px;
 }
 
 #big-div {
   position: fix;
   top:25%;
   }
+
+#row-1 {
+  position: absolute;
+  left:20%;
+  width: auto;
+  height: 0px;
+  top: 10%;
+}
+
+#row-1b {
+  position: absolute;
+  left:27.5%;
+  width: auto;
+  height: 0px;
+  top: 10%;
+}
+
+#row-1c {
+  position: absolute;
+  left:20.5%;
+  width: auto;
+  height: 0px;
+  top: 10%;
+}
+
+#row-2a {
+  position: absolute;
+  left:20%;
+  width: auto;
+  height: 0px;
+  top: 35%;
+}
+
+#row-2b {
+  position: absolute;
+  right:40%;
+  width: auto;
+  height: 0px;
+  top: 35%;
+}
+
+#final-div {
+  position: absolute;
+  left:7%;
+  width: 80%;
+  height: 0px;
+  top: 10%;
+}
+
+h4:hover{
+  border:3px dotted #FFFCF4;
+  border-radius: 20%;
+  padding: 10px;
+  border-style: dotted;
+  position: fixed;
+}
+
 
 #left-column {
     position:absolute;
@@ -118,11 +203,11 @@ h3{
 
 #video {
   position: absolute;
-  top: 20%;
+  top: 10%;
   right: 0;
   bottom: 0;
   left: 0px;
-  min-width: 100%;
+  min-width: 50%;
   min-height: 100%;
 }
 
@@ -137,13 +222,440 @@ a:link {
 }
 
 a:visited {
-  color: rgb(226, 43, 43);
+  color: #FFFCF4;
 }
 
 a:hover {
-  color: rgb(241, 15, 140);
+  color: #FFFCF4;
 }
 
 img {
    position: relative;
+   height:200%
 }
+
+video:hover{
+  border:3px dotted #FFFCF4;
+  border-radius: 5%;
+  padding: 4px;
+  border-style:unset;
+  border-width: 10px;;
+}
+
+.fade-in-image {
+  padding: 0;
+  margin: 0;
+  position: center;
+  animation: fadeIn 2s;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  -o-animation: fadeIn 2s;
+  -ms-animation: fadeIn 2s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+.fade-out {
+  animation: fadeOut ease 4s;
+  -webkit-animation: fadeOut ease 4s;
+  -moz-animation: fadeOut ease 4s;
+  -o-animation: fadeOut ease 4s;
+  -ms-animation: fadeOut ease 4s;
+}
+@keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-o-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@-ms-keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+}
+
+@media screen and (min-width: 992px) {
+  @font-face {
+      font-family: Cooper Light;
+      src: url(Cooper\ Light\ BT.ttf);
+  }
+  
+  @font-face {
+    font-family: Franklin Gothic;
+    src: url(FranklinGothic.woff);
+  }
+  
+  @font-face {
+    font-family: Nuckle;
+    src: url(Nuckle-Regular.woff);
+  }
+  
+  body{
+      background-color: #FFFCF4;
+      padding: 0;
+      margin: 0;
+      cursor:url('heartcursor.png'), auto;
+      font-family: Nuckle;
+      color: rgb(226, 43, 43);
+  }
+  
+  h1{
+      font-family: kansasnew, serif;
+      font-size: 10em;
+      color:rgb(226, 43, 43);
+      line-height: 0.05em;
+  }
+  
+  h2{
+    font-family: Nuckle;
+    font-weight: 50000;
+    font-style: normal;
+    font-size: 1.35em;
+    color: rgb(226, 43, 43);
+    margin-top:-60px;
+  }
+  
+  h3{
+    font-family: kansasnew, serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 5em;
+    color: rgb(226, 43, 43);
+    line-height: 90px;
+  }
+  
+  h4{
+    font-family: kansasnew, serif;
+    font-weight: 500;
+    font-style: normal;
+      font-size: 2.8em;
+      color: rgb(226, 43, 43);
+      position: fixed;
+      border: 3px dotted transparent;
+  }
+  
+  h5{
+    font-family: kansasnew, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.2em;
+    color: rgb(226, 43, 43);
+    position: fixed;
+    letter-spacing: -1px;
+    border: 3px dotted transparent;
+    top: 25%;
+    left:35%
+  }
+  
+  
+  .accept {
+      position:relative;
+      font-family: kansasnew, serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 1em;
+      color:rgb(226, 43, 43);
+      /* line-height: 200px; */
+      letter-spacing: -0.01em;
+      line-height: 20px;
+  }
+  
+  .love {
+      position:relative;
+      font-family: kansasnew, serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 1.5em;
+      color:rgb(226, 43, 43);
+      letter-spacing: -0.01em;
+      line-height: 95px;
+  }
+  
+  .yourself1 {
+      position:relative;
+      font-family: kansasnew, serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 0.75em;
+      color:rgb(226, 43, 43);
+      letter-spacing: -0.01em;
+      line-height: 200px;
+  }
+  
+  .yourself2 {
+      position:relative;
+      font-family: kansasnew, serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 0.75em;
+      color:rgb(226, 43, 43);
+      letter-spacing: -0.01em;
+      line-height: 200px;
+  }
+  
+  #big-div {
+    position: fix;
+    top:25%;
+    }
+  
+  #row-1 {
+    position: absolute;
+    left:33%;
+    width: auto;
+    height: 0px;
+    top: 10%;
+  }
+  
+  #row-1b {
+    position: absolute;
+    left:27.5%;
+    width: auto;
+    height: 0px;
+    top: 10%;
+  }
+  
+  #row-1c {
+    position: absolute;
+    left:36.2%;
+    width: auto;
+    height: 0px;
+    top: 10%;
+  }
+  
+  #row-2a {
+    position: absolute;
+    left:40%;
+    width: auto;
+    height: 0px;
+    top: 26%;
+  }
+  
+  #row-2b {
+    position: absolute;
+    right:44%;
+    width: auto;
+    height: 0px;
+    top: 26%;
+  }
+  
+  #final-div {
+    position: absolute;
+    left:18%;
+    width: auto;
+    height: 0px;
+    top: 10%;
+  }
+  
+  h4:hover{
+    border:3px dotted rgb(226, 43, 43);
+    border-radius: 20%;
+    padding: 10px;
+    border-style: dotted;
+    position: fixed;
+  }
+  
+  
+  #left-column {
+      position:absolute;
+      position: center;
+      top:-3%;
+      right: 55%;
+      margin-right: auto;
+      margin-top: 2%
+      }
+  
+  #right-column {
+      position: absolute;
+      z-index: -1;
+      left:50%;
+      top:6%;
+      margin-right: 10%;
+      margin-left: auto;
+      margin-bottom: 10%;
+      overflow: hidden;
+      border-radius: 5%;
+      }
+  
+  #video {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    bottom: 0;
+    left: 0px;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  
+  /* .videostyle {
+    border-style:solid;
+    padding: 15px;
+    border-color: rgb(241, 15, 140);
+  } */
+  
+  a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: rgb(226, 43, 43);
+  }
+  
+  a:hover {
+    color: rgb(241, 15, 140);
+  }
+  
+  img {
+     position: relative;
+  }
+  
+  video:hover{
+    border:3px dotted rgb(226, 43, 43);
+    border-radius: 5%;
+    padding: 4px;
+    border-style:unset;
+    border-width: 10px;;
+  }
+  
+  .fade-in-image {
+    padding: 0;
+    margin: 0;
+    position: center;
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+  }
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  .fade-out {
+    animation: fadeOut ease 4s;
+    -webkit-animation: fadeOut ease 4s;
+    -moz-animation: fadeOut ease 4s;
+    -o-animation: fadeOut ease 4s;
+    -ms-animation: fadeOut ease 4s;
+  }
+  @keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+  
+  @-moz-keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+  
+  @-webkit-keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+  
+  @-o-keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+  
+  @-ms-keyframes fadeOut {
+    0% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+  }
