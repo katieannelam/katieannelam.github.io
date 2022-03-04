@@ -1,0 +1,149 @@
+@font-face {
+    font-family: Cooper Light;
+    src: url(Cooper\ Light\ BT.ttf);
+}
+
+@font-face {
+  font-family: Franklin Gothic;
+  src: url(FranklinGothic.woff);
+}
+
+@font-face {
+  font-family: Nuckle;
+  src: url(Nuckle-Regular.woff);
+}
+
+body{
+    background-color:#FFFCF4;
+    padding: 0;
+    margin: 0;
+    cursor:url('heartcursor.png'), auto;
+    font-family: Franklin Gothic;
+}
+
+h1{
+    font-family: kansasnew, serif;
+    font-size: 10em;
+    color:rgb(226, 43, 43);
+    line-height: 0.05em;
+}
+
+h2{
+  font-family: Nuckle;
+  font-weight: 50000;
+  font-style: normal;
+  font-size: 1.35em;
+  color: rgb(226, 43, 43);
+  margin-top:-60px;
+}
+
+h3{
+  font-family: kansasnew, serif;
+  font-weight: 500;
+  font-style: normal;
+    font-size: 1.5em;
+    color: rgb(226, 43, 43);
+}
+
+.accept {
+    position:relative;
+    font-family: kansasnew, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1em;
+    color:rgb(226, 43, 43);
+    /* line-height: 200px; */
+    letter-spacing: -0.01em;
+    line-height: 20px;
+}
+
+.love {
+    position:relative;
+    font-family: kansasnew, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5em;
+    color:rgb(226, 43, 43);
+    letter-spacing: -0.01em;
+    line-height: 95px;
+}
+
+.yourself1 {
+    position:relative;
+    font-family: kansasnew, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 0.75em;
+    color:rgb(226, 43, 43);
+    letter-spacing: -0.01em;
+    line-height: 200px;
+}
+
+.yourself2 {
+    position:relative;
+    font-family: kansasnew, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 0.75em;
+    color:rgb(226, 43, 43);
+    letter-spacing: -0.01em;
+    line-height: 200px;
+}
+
+#big-div {
+  position: fix;
+  top:25%;
+  }
+
+#left-column {
+    position:absolute;
+    position: center;
+    top:-3%;
+    right: 55%;
+    margin-right: auto;
+    margin-top: 2%
+    }
+
+#right-column {
+    position: absolute;
+    z-index: -1;
+    left:50%;
+    top:6%;
+    margin-right: 10%;
+    margin-left: auto;
+    margin-bottom: 10%;
+    overflow: hidden;
+    border-radius: 5%;
+    }
+
+#video {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  bottom: 0;
+  left: 0px;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* .videostyle {
+  border-style:solid;
+  padding: 15px;
+  border-color: rgb(241, 15, 140);
+} */
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(226, 43, 43);
+}
+
+a:hover {
+  color: rgb(241, 15, 140);
+}
+
+img {
+   position: relative;
+}

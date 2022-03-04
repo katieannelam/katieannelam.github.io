@@ -12,17 +12,61 @@ body {
     }
 
 .style-1 {
-    font-size: 35px;
+    font-size: 30px;
     font-family: karla; 
     color: #2b2b2b;
 }
 
 #container {
     position: center;
-    left: 15%;
+    margin-left: 2%;
     margin-top: 5%;
     /* background-color: seagreen; */
     width: 80%;
+}
+
+#container-2 {
+    position: center;
+    margin-left: 15%;
+    margin-top: 5%;
+    /* background-color: seagreen; */
+    width: 80%;
+}
+
+#container-3 {
+    position: center;
+    margin-left: 15%;
+    margin-top: 5%;
+    /* background-color: seagreen; */
+    width: 80%;
+    line-height: 100%;
+}
+
+#container-4 {
+    position: center;
+    margin-left: 15%;
+    margin-top: 5%;
+    /* background-color: seagreen; */
+    width: 80%;
+    line-height: 100%;
+}
+
+#container-5 {
+    position: center;
+    margin-right: 15%;
+    margin-top: 5%;
+    /* background-color: seagreen; */
+    width: 80%;
+    line-height: 100%;
+}
+
+#container-6 {
+    position: center;
+    margin-right: 15%;
+    margin-top: 5%;
+    /* background-color: seagreen; */
+    width: 80%;
+    line-height: 250%;
 }
 
 a:link {

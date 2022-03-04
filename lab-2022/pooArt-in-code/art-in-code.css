@@ -1,0 +1,136 @@
+@font-face {
+    font-family: Cooper Light;
+    src: url(Cooper\ Light\ BT.ttf);
+}
+
+body{
+    background-color:rgb(146, 184, 255);
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10em;
+    color:rgb(0, 255, 208);
+    /* color:rgb(226, 43, 43); */
+    line-height: 0.05em;
+}
+
+.accept {
+    position:relative;
+    font-family: kansasnew, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1em;
+    color:rgb(255, 255, 240);
+    /* line-height: 200px; */
+    letter-spacing: -0.01em;
+    line-height: 20px;
+}
+
+.love {
+    position:relative;
+    font-family: kansasnew, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5em;
+    color:rgb(255, 255, 240);
+    letter-spacing: -0.01em;
+    line-height: 95px;
+}
+
+.yourself1 {
+    position:relative;
+    font-family: kansasnew, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 0.75em;
+    color:rgb(255, 255, 240);
+    letter-spacing: -0.01em;
+    line-height: 200px;
+}
+
+.yourself2 {
+    position:relative;
+    font-family: kansasnew, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 0.75em;
+    color:rgb(255, 255, 240);
+    letter-spacing: -0.01em;
+    line-height: 200px;
+}
+
+#left-column {
+    position:fixed;
+    position: center;
+    margin-left: 2%;
+    margin-right: auto;
+    margin-top: 2%
+    }
+
+#right-column {
+    position: center;
+    margin-right: 8%;
+    margin-right: auto;
+    margin-bottom: 10%
+    }
+
+#video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0px;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+a:link {
+    color: transparent;
+}
+
+img {
+   position: relative;
+}
+
+.fade-in-image {
+    padding: 0;
+    margin: 0;
+    position: center;
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+  }
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+  img {
+      padding: 0;
+      margin: 0;
+  }
