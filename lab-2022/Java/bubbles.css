@@ -1,0 +1,103 @@
+@media screen and (max-width: 992px) {
+html {
+    font-size: 62.5%;
+    background: url(Baby.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    margin: 0;
+}
+
+#container {
+    width: 80vw;
+    height: 80vh;
+    /* background:linear-gradient(135deg, rgb(0, 0, 255), rgb(242, 261, 249)); */
+}
+
+.bubble {
+    position: absolute;
+    width: 50rem;
+    height: 50rem;
+    background: rgba(255, 255, 255, 0.5);
+    /* border: solid .1rem rgba(106, 198, 198, 0.2); */
+    border-radius: 100px;
+    box-shadow: inset -.3rem -.3r em .8rem rgba(106, 198, 198, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: Bobble;
+    src: url(Bobble.woff2);
+  }
+
+@font-face {
+    font-family: Cocogoose;
+    src: url(Cocogoose.ttf);
+  }
+
+h1{
+    font-family: Cocogoose;
+    font-size: 50px;
+    color: rgb(33, 33, 33);
+    /* text-shadow: 4px 4px 4px rgba(106, 106, 106, 0.6); */
+    position:relative;
+    padding-left: 10%;
+}
+}
+
+@media screen and (min-width: 992px) {
+    html {
+        font-size: 62.5%;
+        background: url(Baby.png) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    
+    body {
+        margin: 0;
+    }
+    
+    #container {
+        width: 80vw;
+        height: 80vh;
+        /* background:linear-gradient(135deg, rgb(0, 0, 255), rgb(242, 261, 249)); */
+    }
+    
+    .bubble {
+        position: absolute;
+        width: 50rem;
+        height: 50rem;
+        background: rgba(255, 255, 255, 0.5);
+        /* border: solid .1rem rgba(106, 198, 198, 0.2); */
+        border-radius: 100px;
+        box-shadow: inset -.3rem -.3r em .8rem rgba(106, 198, 198, 0.3);
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    @font-face {
+        font-family: Bobble;
+        src: url(Bobble.woff2);
+      }
+    
+    @font-face {
+        font-family: Cocogoose;
+        src: url(Cocogoose.ttf);
+      }
+    
+    h1{
+        font-family: Cocogoose;
+        font-size: 60px;
+        color: rgb(33, 33, 33);
+        /* text-shadow: 4px 4px 4px rgba(106, 106, 106, 0.6); */
+        position:relative;
+        padding-left: 18%;
+    }
+    }
