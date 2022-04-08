@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(255, 251, 236);
+}
+
+h1 {
+    font-family: Vouge Font;
+    font-size: 80px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+a {
+    font-family: Vouge Font;
+    font-size: 50px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-placement {
+    /* background-color: blue; */
+    height: 600px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+}
+
+@font-face {
+    font-family: Vouge Font;
+    src: url(Vogue.ttf);
+  }
+
+.real {
+    position: absolute;
+    left: 10px;
+}
