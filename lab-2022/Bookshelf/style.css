@@ -6,6 +6,7 @@ body{
     font-size: 3rem;
     margin-left: 1em;
     margin-top: -1em;
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👓</text></svg>") 16 0,auto;
 }
 
 h1{
@@ -18,12 +19,34 @@ h1{
 
 h2 {
     font-size: 5rem;
-    line-height: 1.2em;
+    line-height: 1em;
     font-family: playfair display;
     font-weight: 500;
     font-style: normal;
     color: rgb(31, 31, 31);
     width: 20ch;
+}
+
+h3 {
+  margin-bottom: -50px;
+  margin-top:-75px;
+  font-size: 1.5rem;
+  font-family: playfair display;
+  font-weight: 500;
+  font-style: normal;
+  color: rgb(31, 31, 31);
+  /* background-color: rgb(0, 255, 60); */
+}
+
+a {
+  margin-bottom: -55px;
+  margin-top:-75px;
+  font-size: 1rem;
+  font-family: playfair display;
+  font-weight: 500;
+  font-style: normal;
+  color: rgb(31, 31, 31);
+  /* background-color: rgb(0, 255, 60); */
 }
 
 .hidden {
@@ -65,7 +88,7 @@ h2 {
 }
 
 .shelf .book-spine:hover {
-  background: rgb(255, 245, 221);
+  background: rgb(255, 252, 241);
   color: rgb(31, 31, 31);
 }
 
@@ -116,4 +139,11 @@ h2 {
     margin: auto;
     margin-bottom: 2em;
   }
+}
+
+.sound {
+  margin-bottom:60px;
+  margin-top: -100px;
+  margin-left: 2px;
+  /* background-color: lightgreen; */
 }
