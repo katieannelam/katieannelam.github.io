@@ -13,8 +13,49 @@ body{
     margin-top: -15.5%;
 }
 
+#arrow-left {
+    margin-left: 3%;
+    margin-top: -15.5%;
+}
+
+#twoarrows{
+    display: flex;
+    position: absolute;
+    margin-left: 42%;
+    margin-top: -350px; 
+}
+
+#twoarrows-online-vs-offline{
+    display: flex;
+    position: absolute;
+    margin-left: 42%;
+    top: 700px;
+}
+
+#yo {
+    margin-top: -67%;
+    margin-left: 60px;
+    width: 91%;
+    display: flex;
+    float: left;
+    justify-content: space-between;
+}
+
 #selected {
     color: #515BD4;
+}
+
+#offline-title {
+    color: #515BD4;
+}
+
+#online-title {
+    color: #d74b4b;
+}
+
+#online-vs-offline-title {
+    color: #27872a;
+    line-height: 0.85em;
 }
 
 li {
@@ -28,6 +69,10 @@ a {
     display: block;
     padding: 30px;
     text-decoration: none;
+}
+
+#online-menu{
+    margin-left: 75px;
 }
 
 h1{
