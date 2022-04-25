@@ -1,0 +1,79 @@
+body{
+    background-color: rgb(255, 254, 248);
+}
+
+#arrow {
+    position: absolute;
+    margin-left: 47%;
+    margin-top: -350px;
+}
+
+#arrow-right {
+    margin-left: 90%;
+    margin-top: -15.5%;
+}
+
+#selected {
+    color: #515BD4;
+}
+
+li {
+    float: left;
+    list-style-type: none
+  }
+  
+a {
+    /* margin-top: -150px;
+    margin-left: 15px; */
+    display: block;
+    padding: 30px;
+    text-decoration: none;
+}
+
+h1{
+    font-family: 'Jockey One', sans-serif;
+    color: rgb(36, 36, 36);
+    font-size: 25em;
+    text-align: center;
+    margin-top: 0%;
+}
+
+h2{
+    font-family: 'Jockey One', sans-serif;
+    color: rgb(36, 36, 36);
+    font-size: 7em;
+    text-align: center;
+    margin-top: -1%;
+}
+
+h3{
+    margin-top: -150px;
+    margin-left: 32px;
+    font-family: 'Jockey One', sans-serif;
+    color: rgb(36, 36, 36);
+    font-size: 2em;
+    text-align: center;
+}
+
+div.big-gallery {
+    margin-left: 50%;
+    margin-top: 50%;
+    width: 100%;
+    margin: 5px;
+  }
+
+div.gallery {
+    margin: 40px;
+    margin-bottom: 90px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+  }
+  
+  div.gallery img {
+    margin-top: -120px;
+    float: left;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+  }
