@@ -2,6 +2,14 @@ body{
     background-color: rgb(255, 254, 248);
 }
 
+#online-vs-offline-title{
+    display: flex;
+}
+
+#online-vs-offline-style{
+    color: #27872a;
+}
+
 #arrow {
     position: absolute;
     margin-left: 47%;
@@ -10,7 +18,7 @@ body{
 
 #arrow-right {
     margin-left: 90%;
-    margin-top: -15.5%;
+    margin-top: -15%;
 }
 
 #arrow-left {
@@ -33,13 +41,59 @@ body{
 }
 
 #yo {
-    margin-top: -67%;
+    margin-top: -830px;
     margin-left: 60px;
     width: 91%;
     display: flex;
     float: left;
     justify-content: space-between;
 }
+
+#yo-2 {
+    margin-top: -568px;
+    margin-left: 60px;
+    width: 91%;
+    display: flex;
+    float: left;
+    justify-content: space-between;
+}
+
+#yo-3 {
+    margin-top: -568px;
+    margin-left: 60px;
+    width: 91%;
+    display: flex;
+    float: left;
+    justify-content: space-between;
+}
+
+#yo-4 {
+    margin-top: -1092px;
+    margin-left: 60px;
+    width: 91%;
+    display: flex;
+    float: left;
+    justify-content: space-between;
+}
+
+#yo-5 {
+    margin-top: -1354px;
+    margin-left: 60px;
+    width: 91%;
+    display: flex;
+    float: left;
+    justify-content: space-between;
+}
+
+#yo-6 {
+    margin-top: -2855px;
+    margin-left: 60px;
+    width: 91%;
+    display: flex;
+    float: left;
+    justify-content: space-between;
+}
+
 
 #selected {
     color: #515BD4;
