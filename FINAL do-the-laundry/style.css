@@ -1,0 +1,115 @@
+:root {
+  --x: 0;
+}
+
+body{
+    background-color: rgb(255, 253, 239);
+    font-family: kansasnew, serif;
+    font-weight: 550;
+    font-size: 2em;
+    color:#1b1b1b;
+}
+
+p{
+  background-color: rgb(255, 253, 239);
+  font-family: kansasnew, serif;
+  font-weight: 550;
+  font-size: 1.75em;
+  color:#1b1b1b;
+}
+
+h1 {
+    font-family: kansasnew, serif;
+    font-weight: 550;
+    font-size: 3em;
+    color:#1b1b1b;
+    line-height: 0.05em;
+}
+
+div {
+    width: 50%;
+    margin-top: 3em;
+    margin-left: 16.5em;
+}
+
+.pics {
+    width: 50%;
+    margin-top: 8em;
+    margin-left: 20em;
+    margin-top: -1em;
+}
+
+#countdown {
+  margin-top: -23.25em;
+  margin-left: 49.25em;
+}
+
+#restart {
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  }
+
+
+/*.pics .img-top {
+    display: none;
+    position: absolute;
+    margin-left: -30.325em;
+    margin-top: 0em;
+}*/
+/*.pics:hover .img-top {
+    display: inline;
+}
+  
+  body::before,
+  body::after {
+    color: #1b1b1b;
+    font-family: kansasnew, serif;
+    font-weight: 550;
+    font-size: 3em;
+    margin-left: 32em;
+    margin-top: 8em;
+    content: "";
+    width: 1ch;
+    animation: countdown 15s step-end infinite;
+  }
+  
+  body::after {
+    animation-duration: 15s;
+  }
+  
+  @keyframes countdown {
+    0% {
+      content: "9";
+    }
+    10% {
+      content: "8";
+    }
+    20% {
+      content: "7";
+    }
+    30% {
+      content: "6";
+    }
+    40% {
+      content: "5";
+    }
+    50% {
+      content: "4";
+    }
+    60% {
+      content: "3";
+    }
+    70% {
+      content: "2";
+    }
+    80% {
+      content: "1";
+    }
+    90% {
+      content: "0";
+    }
+    100% {
+      content: "0";
+    }
+  }*/
