@@ -1,207 +1,170 @@
-// Original author: Philip Klauzinski
-// Website: http://endless.horse/
+//Original website: https://checkboxrace.com/
+//Author: Tim Holman
 
+//Something that drew me to this interaction is  that it's in the format of a game which makes it fun and engaging. While the layout and design is rather simple with a white background and black text, I think its simplicity actually supports the nature of the game. This game requires lots of concentration and little distraction, so I think the design reflects that well. By studying this code, I hope to learn how to generate a random stream of elements and use a clock as a time factor. 
 
-(function($) {
+//This section establishes single constant values
+(() => {
+    const allCheckboxes = document.querySelectorAll("input");
+    const checkboxWrapper = document.querySelector(".checkboxes");
+    const scoreBoard = document.querySelector(".score");
+    const currentScore = document.querySelector(".current");
+    const tips = document.querySelector(".tips");
+    const timer = document.querySelector(".timer");
+    const flagPiece = document.querySelector(".flagPiece");
+    const finalTime = document.querySelector(".finalTime");
+    const resetButton = document.querySelector(".resetButton");
+    const endBoard = document.querySelector(".end");
+    const boostWords = [
+      "Speed!",
+      "Nice!",
+      "Fast!",
+      "Power!",
+      "Great!",
+      "Awesome!",
+      "Amazing!",
+      "Super!",
+    ];
+  
+//This is to reset the game
+    resetButton.addEventListener("click", reset);
+  
+//This calls a function and sets a timer from 0
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 50);
+  
+    let animationFrame;
+    let startTime;
+  
+    let currentIndex = 0;
+  
+    function startTimer() {
+      startTime = Date.now();
+      animationFrame = window.requestAnimationFrame(tick);
+    }
+  
+//This sets the value of the timer thow count in miliseconds
+    function msToTime(duration) {
+      var milliseconds = parseInt((duration % 1000) / 10)
+          .toString()
+          .padStart(2, "0"),
+        seconds = Math.floor((duration / 1000) % 60),
+        minutes = Math.floor((duration / (1000 * 60)) % 60),
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+  
+      return minutes + ":" + seconds + ":" + milliseconds;
+    }
+  
+//This triggers the tick interaction of the checkbox 
+    function tick() {
+      var delta = Date.now() - startTime;
+      timer.innerHTML = msToTime(delta);
+  
+      animationFrame = window.requestAnimationFrame(tick);
+    }
 
-    'use strict';
-
-    // Define the jscroll namespace and default settings
-    $.jscroll = {
-        defaults: {
-            debug: false,
-            autoTrigger: true,
-            autoTriggerUntil: false,
-            loadingHtml: '<small>Loading...</small>',
-            padding: 0,
-            nextSelector: 'a:last',
-            contentSelector: '',
-            pagingSelector: '',
-            callback: false
+//This determines the randomized height of each checkbox 
+    function randomPosOrNeg(number) {
+      const posOrNeg = Math.random() < 0.5 ? -1 : 1;
+      return Math.min(Math.random() * number, window.innerHeight - 10) * posOrNeg;
+    }
+  
+//This deterimes whether or not the following checkbox should be available, which depends on whether or not the previous checkbox has been checked
+    function reset() {
+      allCheckboxes.forEach((checkbox, index) => {
+        checkbox.style.transform = "none";
+        if (index !== 0) {
+          checkbox.disabled = true;
         }
-    };
+        checkbox.checked = false;
+      });
 
-    // Constructor
-    var jScroll = function($e, options) {
+      currentIndex = 0;
+      checkboxWrapper.style.transform = `translateX(${-20 * currentIndex}px)`;
+      currentScore.innerHTML = 0;
+      tips.classList.remove("hide");
+      startTime = null;
+      scoreBoard.classList.remove("show");
+      timer.innerHTML = "00:00:00";
+      flagPiece.style.fill = "red";
+      endBoard.classList.remove("show");
+    }
+  
+//This makes the animations move vertically
+    function addBoost(element) {
+      let verticalMovement = new DOMMatrixReadOnly(
+        window.getComputedStyle(element).transform
+      ).f;
+  
+      const boostElement = document.createElement("div");
+      boostElement.classList.add("boost");
+      boostElement.style.top = `${
+        checkboxWrapper.clientHeight / 2 + verticalMovement - 60
+      }px`;
+      boostElement.style.left = `${element.offsetLeft}px`;
+      boostElement.innerHTML =
+        boostWords[Math.floor(Math.random() * boostWords.length)];
+      checkboxWrapper.appendChild(boostElement);
+    }
 
-        // Private vars and methods
-        var _data = $e.data('jscroll'),
-            _userOptions = (typeof options === 'function') ? { callback: options } : options,
-            _options = $.extend({}, $.jscroll.defaults, _userOptions, _data || {}),
-            _isWindow = ($e.css('overflow-y') === 'visible'),
-            _$next = $e.find(_options.nextSelector).first(),
-            _$window = $(window),
-            _$body = $('body'),
-            _$scroll = _isWindow ? _$window : $e,
-            _nextHref = $.trim(_$next.attr('href') + ' ' + _options.contentSelector),
-
-            // Check if a loading image is defined and preload
-            _preloadImage = function() {
-                var src = $(_options.loadingHtml).filter('img').attr('src');
-                if (src) {
-                    var image = new Image();
-                    image.src = src;
-                }
-            },
-
-            // Wrap inner content, if it isn't already
-            _wrapInnerContent = function() {
-                if (!$e.find('.jscroll-inner').length) {
-                    $e.contents().wrapAll('<div class="jscroll-inner" />');
-                }
-            },
-
-            // Find the next link's parent, or add one, and hide it
-            _nextWrap = function($next) {
-                var $parent;
-                if (_options.pagingSelector) {
-                    $next.closest(_options.pagingSelector).hide();
-                } else {
-                    $parent = $next.parent().not('.jscroll-inner,.jscroll-added').addClass('jscroll-next-parent').hide();
-                    if (!$parent.length) {
-                        $next.wrap('<div class="jscroll-next-parent" />').parent().hide();
-                    }
-                }
-            },
-
-            // Remove the jscroll behavior and data from an element
-            _destroy = function() {
-                return _$scroll.unbind('.jscroll')
-                    .removeData('jscroll')
-                    .find('.jscroll-inner').children().unwrap()
-                    .filter('.jscroll-added').children().unwrap();
-            },
-
-            // Observe the scroll event for when to trigger the next load
-            _observe = function() {
-                _wrapInnerContent();
-                var $inner = $e.find('div.jscroll-inner').first(),
-                    data = $e.data('jscroll'),
-                    borderTopWidth = parseInt($e.css('borderTopWidth'), 10),
-                    borderTopWidthInt = isNaN(borderTopWidth) ? 0 : borderTopWidth,
-                    iContainerTop = parseInt($e.css('paddingTop'), 10) + borderTopWidthInt,
-                    iTopHeight = _isWindow ? _$scroll.scrollTop() : $e.offset().top,
-                    innerTop = $inner.length ? $inner.offset().top : 0,
-                    iTotalHeight = Math.ceil(iTopHeight - innerTop + _$scroll.height() + iContainerTop);
-
-                if (!data.waiting && iTotalHeight + _options.padding >= $inner.outerHeight()) {
-                    //data.nextHref = $.trim(data.nextHref + ' ' + _options.contentSelector);
-                    _debug('info', 'jScroll:', $inner.outerHeight() - iTotalHeight, 'from bottom. Loading next request...');
-                    return _load();
-                }
-            },
-
-            // Check if the href for the next set of content has been set
-            _checkNextHref = function(data) {
-                data = data || $e.data('jscroll');
-                if (!data || !data.nextHref) {
-                    _debug('warn', 'jScroll: nextSelector not found - destroying');
-                    _destroy();
-                    return false;
-                } else {
-                    _setBindings();
-                    return true;
-                }
-            },
-
-            _setBindings = function() {
-                var $next = $e.find(_options.nextSelector).first();
-                if (!$next.length) {
-                    return;
-                }
-                if (_options.autoTrigger && (_options.autoTriggerUntil === false || _options.autoTriggerUntil > 0)) {
-                    _nextWrap($next);
-                    if (_$body.height() <= _$window.height()) {
-                        _observe();
-                    }
-                    _$scroll.unbind('.jscroll').bind('scroll.jscroll', function() {
-                        return _observe();
-                    });
-                    if (_options.autoTriggerUntil > 0) {
-                        _options.autoTriggerUntil--;
-                    }
-                } else {
-                    _$scroll.unbind('.jscroll');
-                    $next.bind('click.jscroll', function() {
-                        _nextWrap($next);
-                        _load();
-                        return false;
-                    });
-                }
-            },
-
-            // Load the next set of content, if available
-            _load = function() {
-                var $inner = $e.find('div.jscroll-inner').first(),
-                    data = $e.data('jscroll');
-
-                data.waiting = true;
-                $inner.append('<div class="jscroll-added" />')
-                    .children('.jscroll-added').last()
-                    .html('<div class="jscroll-loading">' + _options.loadingHtml + '</div>');
-
-                return $e.animate({scrollTop: $inner.outerHeight()}, 0, function() {
-                    $inner.find('div.jscroll-added').last().load(data.nextHref, function(r, status) {
-                        if (status === 'error') {
-                            return _destroy();
-                        }
-                        var $next = $(this).find(_options.nextSelector).first();
-                        data.waiting = false;
-                        data.nextHref = $next.attr('href') ? $.trim($next.attr('href') + ' ' + _options.contentSelector) : false;
-                        $('.jscroll-next-parent', $e).remove(); // Remove the previous next link now that we have a new one
-                        _checkNextHref();
-                        if (_options.callback) {
-                            _options.callback.call(this);
-                        }
-                        _debug('dir', data);
-                    });
-                });
-            },
-
-            // Safe console debug - http://klauzinski.com/javascript/safe-firebug-console-in-javascript
-            _debug = function(m) {
-                if (_options.debug && typeof console === 'object' && (typeof m === 'object' || typeof console[m] === 'function')) {
-                    if (typeof m === 'object') {
-                        var args = [];
-                        for (var sMethod in m) {
-                            if (typeof console[sMethod] === 'function') {
-                                args = (m[sMethod].length) ? m[sMethod] : [m[sMethod]];
-                                console[sMethod].apply(console, args);
-                            } else {
-                                console.log.apply(console, args);
-                            }
-                        }
-                    } else {
-                        console[m].apply(console, Array.prototype.slice.call(arguments, 1));
-                    }
-                }
-            };
-
-        // Initialization
-        $e.data('jscroll', $.extend({}, _data, {initialized: true, waiting: false, nextHref: _nextHref}));
-        _wrapInnerContent();
-        _preloadImage();
-        _setBindings();
-
-        // Expose API methods via the jQuery.jscroll namespace, e.g. $('sel').jscroll.method()
-        $.extend($e.jscroll, {
-            destroy: _destroy
-        });
-        return $e;
-    };
-
-    // Define the jscroll plugin method and loop
-    $.fn.jscroll = function(m) {
-        return this.each(function() {
-            var $this = $(this),
-                data = $this.data('jscroll'), jscroll;
-
-            // Instantiate jScroll on this element if it hasn't been already
-            if (data && data.initialized) {
-                return;
-            }
-            jscroll = new jScroll($this, m);
-        });
-    };
-
-})(jQuery);
+//This determines whether or not all of the checkboxes have been checked
+    document.body.addEventListener("click", () => {
+      if (currentIndex === 0 || currentIndex === allCheckboxes.length) return;
+  
+      allCheckboxes[currentIndex].disabled = true;
+      allCheckboxes[currentIndex - 1].checked = false;
+      allCheckboxes[currentIndex - 1].disabled = false;
+      currentIndex--;
+      currentScore.innerText = currentIndex.toString().padStart(3, "0");
+      checkboxWrapper.style.transform = `translateX(${-20 * currentIndex}px)`;
+    });
+  
+//This stops the timer after all of the checkboxes have been checked. 
+    allCheckboxes.forEach((checkbox, index) => {
+      checkbox.addEventListener("click", (event) => {
+        if (!startTime) {
+          startTimer();
+        }
+  
+        if (index === currentIndex) {
+          if (currentIndex === 0) {
+            tips.classList.add("hide");
+            scoreBoard.classList.add("show");
+          }
+  
+          event.stopPropagation();
+  
+          if (Math.random() > 0.6) addBoost(checkbox);
+  
+          currentIndex++;
+          currentScore.innerText = currentIndex.toString().padStart(3, "0");
+  
+          if (currentIndex === allCheckboxes.length) {
+            flagPiece.style.fill = "#00c800";
+            cancelAnimationFrame(animationFrame);
+            scoreBoard.classList.remove("show");
+  
+            var delta = Date.now() - startTime;
+            finalTime.innerHTML = msToTime(delta);
+            endBoard.classList.add("show");
+            return;
+          }
+  
+          allCheckboxes[currentIndex].disabled = false;
+          checkboxWrapper.style.transform = `translateX(${-20 * currentIndex}px)`;
+  
+          allCheckboxes[
+            currentIndex
+          ].style.transform = `translateY(${randomPosOrNeg(5 + currentIndex)}px)`;
+        } else if (currentIndex === allCheckboxes.length) {
+          if (currentIndex === allCheckboxes.length) {
+            event.stopPropagation();
+            event.preventDefault();
+          }
+        }
+      });
+    });
+  })();
+  
